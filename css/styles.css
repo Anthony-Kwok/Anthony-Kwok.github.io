@@ -202,3 +202,7 @@
 	background: black;
 	color: white;
 }
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}

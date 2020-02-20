@@ -1,0 +1,185 @@
+/* Small Devices */
+@media screen and (min-width: 300px) {
+	.carousel-inner > .item > img {
+	width:100% !important;
+	height:150px !important;
+	}
+	.thumbnail.selfie {
+		margin-top: 1em;
+	}
+}
+/* Medium Devices */
+@media screen and (min-width: 450px) {
+	.carousel-inner > .item > img {
+	width:100% !important;
+	height:500px !important;
+	}
+
+}
+
+@media screen and (min-width: 1000px) {
+	.carousel-inner > .item > img {
+	width:100% !important;
+	height:500px !important;
+	}
+	.thumbnail.selfie {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+.noPadding{
+	padding: 0px;
+}
+
+.bg1{
+	background-color: #ffffff;
+	color: #ffffff;
+}
+.noWidth{
+	width: 0%;
+}
+.bg2{
+	background-color: #1abc9c;
+	color: #1abc9c;
+}
+.bg-blue{
+	background-color: #00AFC8;
+}
+.marginRight{
+	margin-right: 1em !important;
+}
+
+.marginLeft{
+	margin-left: 1em !important;
+}
+.bg3{
+	background-color: #00ffff;
+}
+.bg4{
+	background-color: #BEBEBE;
+}
+.leftOffset2{
+	padding-left: 2em;
+}
+.bg-grey{
+	background-color: #f6f6f6;
+}
+.verticalPadding{
+	padding-top: 4em;
+	padding-bottom: 4em;
+}
+.slightVerticalPadding{
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.marginBottom{
+	margin-bottom: 2em;
+}
+.noMargin {
+	margin: 0px;
+}
+.fixedCard{
+	width: 400px;
+	height: 300px;
+}
+.paddingBottom{
+	padding-bottom: 1em;
+}
+.slightPaddingTop{
+	padding-top: 0.5em;
+}
+.paddingTop{
+	padding-top: 1em;
+}
+.paddingTop2{
+	padding-top: 2em;
+}
+.footer-bg {
+	background-color: #333333 !important;
+	color: #ffffff !important;
+}
+.maxWidth{
+	width: 100%;
+}
+.noPaddingTop{
+	padding-top:0px !important;
+}
+.horizontalPadding1em{
+	padding-left:1em;
+	padding-right:1em;
+}
+.horizontalPadding2em{
+	padding-left:2em;
+	padding-right:2em;
+}
+.slideanim {visibility:hidden;}
+.slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+}
+.thumbnail img {
+	width: 100%;
+	height: 300px;
+	margin-bottom: 1em;
+	
+}
+.row.display-flex {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.marginTop1em{
+	margin-top: 1em;
+}
+.marginBottom1em{
+	margin-bottom: 1em;
+}
+.centeredImage{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	padding-bottom: 0px;
+}
+.centeredButton{
+	display: inline;
+	margin-left: 1em;
+	margin-right: auto;
+	
+}
+.fa {
+  font-size: 2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.25em;
+}
+
+/*hover effect */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #bc2a8d;
+  color: white;
+}
+.fa-github{
+	background: black;
+	color: white;
+}

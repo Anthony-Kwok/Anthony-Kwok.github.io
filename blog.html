@@ -23,9 +23,9 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-	<div class="jumbotron text-center fullPadding marginTop1em" style="margin-bottom:0">
+	<div class="jumbotron text-center fullPadding responsiveMargin" style="margin-bottom:0">
 		<h1>Kwok with a Blog</h1>
-		<p class="marginTop1em">The official blog belonging to Anthony Kwok</p> 
+		<p class="noMarginBottom responsiveFontSize">The official blog belonging to Anthony Kwok</p> 
 	</div>
 	<!-- navbar -->
 	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
@@ -36,7 +36,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>                        
 				</button>
-			<a class="navbar-brand" href="#myPage">Anthony Kwok</a>
+			<a class="navbar-brand" href="/index.html">Anthony Kwok</a>
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 				<ul class="nav navbar-nav navbar-right">
@@ -71,7 +71,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
             <h2 class="blog-post-title">EOL TLS 1.0 and TLS 1.1</h2>
             <p class="blog-post-meta">February 20th, 2020 by <a href="#">Anthony Kwok</a></p>
 
-            <p>So for those who work in SOCs (Security Operation Centers), you probably have heard that TLS 1.0 is going out of support this year.</p>
+            <p>So for those who work in SOCs (Security Operation Centers) or develop/maintain webservers, you probably have heard that TLS 1.0 is going out of support this year.</p>
             <blockquote>
               <p>
 				  According to the report by 
@@ -81,11 +81,22 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 				  The agreement between Apple, Google, Microsoft, and Mozilla to retire support for these aging cryptographic protocols will likely be welcomed by web developers seeking a more secure internet.
 			  </p>
             </blockquote>
-            <p>
-				Luckily for you, I have created some best practices for you when it comes to changing your TLS settings for your webserver. 
-				You can download the txt file <em><a href="./blog_assets/TLS_Settings.txt" download>here</a></em>. If you don't trust this file. Go to <em><a href="https://www.virustotal.com/gui/home/upload">VirusTotal</a></em> 
-				and run that file to make sure there is no malware in that document. It covers TLS settings for Apache and Nginx but I will add settings for Windows, Postfix and Outlook later. 
-				Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a></strong>. Make sure to add an HSTS header to get that A+ rating.
+            <p>Luckily for you, I have created some best practices for you when it comes to changing your TLS settings for your webserver.<br> Here are the TLS settings for Apache</p>
+			<pre><code># Enable TLSv1.2, disable SSLv3.0, TLSv1.0 and TLSv1.1</code><br><code>SSLProtocol             all -SSLv3 -TLSv1 -TLSv1.1</code><br><br><code># Enable modern TLS cipher suites
+SSLCipherSuite ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256</code><br><br><code># The order of cipher suites matters
+SSLHonorCipherOrder     on</code><br><br><code># Disable TLS compression
+SSLCompression          off</code><br><br><code># Necessary for Perfect Forward Secrecy (PFS)
+SSLSessionTickets       off</code><br></pre>
+
+			Here are the TLS settings for Nginx
+			<pre><code># Enable TLSv1.2, disable SSLv3.0, TLSv1.0 and TLSv1.1
+ssl_protocols TLSv1.2;</code><br><br><code># Enable modern TLS cipher suites
+ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256;</code><br><br><code># The order of cipher suites matters
+ssl_prefer_server_ciphers on;</code><br></pre>
+				
+				
+			I will add settings for Windows, Postfix and Outlook later. 
+			Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a></strong>. Make sure to add an HSTS header to get that A+ rating.
 				
 			</p>
           </div><!-- /.blog-post -->

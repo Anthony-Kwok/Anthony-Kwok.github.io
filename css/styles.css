@@ -27,9 +27,25 @@
 		height: 300px;
 	}
 }
+@media screen and (max-width: 767px) {
+	.responsiveMargin{
+		margin-top: 2em;
+	}
+	.responsiveFontSize{
+		font-size: 2em !important; 
+	}
+}
+@media screen and (min-width: 768px){
+	.responsiveMargin{
+		margin-top: 1em;
+	}
+}
 
 .noPadding{
 	padding: 0px;
+}
+.noMarginBottom{
+	margin-bottom: 0px !important;
 }
 
 .bg1{
@@ -134,6 +150,9 @@
 }
 .marginTop1em{
 	margin-top: 1em;
+}
+.marginTop2em{
+	margin-top: 2em;
 }
 .marginBottom1em{
 	margin-bottom: 1em;

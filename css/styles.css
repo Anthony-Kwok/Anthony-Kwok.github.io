@@ -160,6 +160,9 @@
 .marginBottom1em{
 	margin-bottom: 1em;
 }
+.marginBottomhalfem{
+	margin-bottom: 0.5em;
+}
 .centeredImage{
 	display: block;
 	margin-left: auto;

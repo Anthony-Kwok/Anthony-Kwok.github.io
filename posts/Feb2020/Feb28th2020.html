@@ -113,15 +113,36 @@ server_tokens off;</code></pre>
 			<p>Put that in between the server code block that handles traffic with HTTPS (should see port 443)</p>
 			<p><b>PHP Configurations</b></p>
 			<p>Disable the expose_php directive</p>
-			<p>By default, the <b>expose_php</b> directive is enabled. However, you may not want to broadcast the specific PHP version your site is using.<br>Similarly, some third-party applications require the <b>expose_php</b> directive to be disabled.</p>
-			<p>To disable the <b>expose_php</b> directive, use a text editor to modify your <i>php.ini</i> file as follows:</p>
-			<pre><code>expose_php = off</code></pre><br>
+			<p>By default, the <b>expose_php</b> directive is enabled. However, you may not want to broadcast the specific PHP version your site is using.<br>Similarly, some third-party applications require the <b>expose_php</b> directive to be disabled.
+			To disable the <b>expose_php</b> directive, use a text editor to modify your <i>php.ini</i> file as follows:</p>
+			<pre><code>expose_php = off</code></pre>
 			<p>With the <b>expose_php</b> directive disabled, PHP will not send the <b>X-Powered-By</b> header. To re-enable the <b>expose_php</b> directive and send the <b>X-Powered-By</b> header, modify your <i>php.ini</i> file as follows:</p>
 			<pre><code>expose_php = on</code></pre>
-			
-			Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a></strong>. Make sure to add an HSTS header to get that A+ rating.
+			<p><b>Wordpress Configurations</b></p>
+			<p>Disable XML-RPC</p>
+			<p>The reason why one should disable xmlrpc is because XMLRPC is used for pingbacks, trackbacks, remote access via mobile devices</p> 
+			<p>and many other features. The pingback feature of WordPress allows DDOS attacks either against the server hosting WordPress or against a third one.</p>
+			<p>Disabling XML-RPC (Put this in your .htaccess file of the root of your Wordpress install, usually found at /var/www/html)</p>
+			<pre><code># Block WordPress xmlrpc.php requests                                          
+<Files xmlrpc.php>                                                             
+order deny,allow                                                               
+deny from all                                                                  
+allow from 127.0.0.1                                                           
+</Files></code></pre>
+			<p>DISABLE REST API User Enumeration Vulnerability (Put this in your .htaccess file of the root of your Wordpress install)</p>
+			<p>WordPress is an open source blogging tool and content management system based on PHP and MySQL.</p>
+			<p>It has many features including a plug-in architecture and a template system.</p>
+			<p>The vulnerability exists because the REST API exposes user data for all users who have authored at least one post of a public post type.</p>
+			<p>This was fixed by showing users that have authored a post of a post type that has `show_in_rest` set to true.</p>
+			<p>To verify this vulnerability, go to http(s)://(yoururlhere)/wp-json/wp/v2/users.</p>
+			<pre><code># Block User ID Phishing Requests
+&lt;IfModule mod_rewrite.c&gt;
+    RewriteCond %{QUERY_STRING} ^author=([0-9]*)
+    RewriteRule .* http://yoururlhere.com/? [L,R=302]
+&lt;/IfModule&gt;</code></pre>
+			<p>Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a><br></strong>. Make sure to add an HSTS header to get that A+ rating.</p>
 				
-			</p>
+			
           </div><!-- /.blog-post -->
           
 		

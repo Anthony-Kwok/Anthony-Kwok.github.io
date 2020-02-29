@@ -89,16 +89,18 @@ RewriteRule .* - [F]
 # and should be set correctly or commented out there
 ServerSignature Off
 ServerTokens Prod</code></pre>
-
-			<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file <br>"000-default-le-ssl.conf" usually found by going to<br>"cd /etc/apache2/sites-enabled/"</p>
+			<blockquote>
+				<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file <br>"000-default-le-ssl.conf" usually found by going to<br>"cd /etc/apache2/sites-enabled/"</p>
+			</blockquote>
 			<pre><code>&lt;IfModule mod_ssl.c&gt;
 &lt;VirtualHost *:443&gt;
 * SSL settings that aren't shown * 
 Header always set Strict-Transport-Security "max-age=31536000"
 &lt;/VirtualHost&gt;
 &lt;/IfModule&gt;</code></pre>
-				
-			<p>Add the 'Header always set Strict-Transport-Security "max-age=31536000"' at towards the bottom of the file, right before &lt;/Virtualhost&gt;</p>
+			<blockquote>	
+				<p>Add the 'Header always set Strict-Transport-Security "max-age=31536000"' at towards the bottom of the file, right before &lt;/Virtualhost&gt;</p>
+			</blockquote>
 			<p><b>Nginx Configurations</b></p>
 			<p>Modify default.conf or nginx.conf</p>
 			<pre><code>#Disable unwanted HTTP Requests
@@ -120,7 +122,9 @@ server_tokens off;</code></pre>
 				</p>
 			</blockquote>   
 			<pre><code>expose_php = off</code></pre>
-			<p>With the <b>expose_php</b> directive disabled, PHP will not send the <b>X-Powered-By</b> header. To re-enable the <b>expose_php</b> directive and send the <b>X-Powered-By</b> header, modify your <i>php.ini</i> file as follows:</p>
+			<blockquote>
+				<p>With the <b>expose_php</b> directive disabled, PHP will not send the <b>X-Powered-By</b> header. To re-enable the <b>expose_php</b> directive and send the <b>X-Powered-By</b> header, modify your <i>php.ini</i> file as follows:</p>
+			</blockquote>
 			<pre><code>expose_php = on</code></pre>
 			<p><b>Wordpress Configurations</b></p>
 			<p>Disable XML-RPC (Put this in your .htaccess file of the root of your Wordpress install)</p>
@@ -129,6 +133,7 @@ server_tokens off;</code></pre>
 				   The reason why one should disable xmlrpc is because XMLRPC is used for pingbacks, trackbacks, remote access via mobile devices
 				   and many other features. The pingback feature of WordPress allows DDOS attacks either against the server hosting WordPress or against a third one.
 				</p>
+			</blockquote>
 			<pre><code># Block WordPress xmlrpc.php requests                                          
 &lt;Files xmlrpc.php&gt;                                                             
 order deny,allow                                                               

@@ -65,7 +65,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
             <p class="blog-post-meta noMarginBottom">February 28th, 2020 by <a href="#">Anthony Kwok</a></p>
 			<p class="blog-post-meta noPadding">Tags: <a href="#">Security</a></p>
 
-            <p>Here's another post for web developers. This is a list of some configurations (not inclusive) that deter attackers from enumerating data from your webserver.</p>
+            <p>Here's another post for web developers. This is a list of some configurations that deter attackers from enumerating data from your webserver.</p>
             <blockquote>
               <p>
 				  These configurations are not plug and play. Please understand what they are doing before you blindly copy and paste code.
@@ -73,22 +73,22 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 			  </p>
             </blockquote>
 			<p>Apache Configurations (disables trace/track and version enumeration. Also forces server tokens)</p>
-			<pre><code># Instead of exposing what version of Apache you're running, this block fixes the issue by stating that you are running some version of Apache</code><br><br>
-			     <code># HTTP TRACE Security Fix
-						TraceEnable off
+			<pre><code># Instead of exposing what version of Apache you're running, this block fixes the issue by stating that you are running some version of Apache</code><br><br><code>
+# HTTP TRACE Security Fix
+TraceEnable off
 						 
-						# HTTP TRACE/TRACK Security Fix - This is also required in each VirtualHost
-						<IfModule mod_rewrite.c>
-						RewriteEngine on
-						RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
-						RewriteRule .* - [F]
-						</IfModule>
-						 
-						# Disable Reporting Apache version via HTTP headers
-						# These are set to On and OS respectively in httpd.conf by default
-						# and should be set correctly or commented out there
-						ServerSignature Off
-						ServerTokens Prod</code></pre>
+# HTTP TRACE/TRACK Security Fix - This is also required in each VirtualHost
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
+RewriteRule .* - [F]
+</IfModule>
+
+# Disable Reporting Apache version via HTTP headers
+# These are set to On and OS respectively in httpd.conf by default
+# and should be set correctly or commented out there
+ServerSignature Off
+ServerTokens Prod</code></pre>
 
 			Here are the TLS settings for Nginx
 			<pre><code># Enable TLSv1.2, disable SSLv3.0, TLSv1.0 and TLSv1.1
@@ -97,7 +97,7 @@ ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDS
 ssl_prefer_server_ciphers on;</code><br></pre>
 				
 				
-			I will add settings for Windows, Postfix and Outlook later. 
+			
 			Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a></strong>. Make sure to add an HSTS header to get that A+ rating.
 				
 			</p>

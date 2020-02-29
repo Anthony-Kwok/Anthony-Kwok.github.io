@@ -72,7 +72,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 				  These configurations cover Apache, Nginx, PHP, and Wordpress
 			  </p>
             </blockquote>
-			<p>Apache Configurations (disables trace/track and version enumeration. Also forces server tokens)</p>
+			<p>Apache Configurations</p>
 			<pre><code># Instead of exposing what version of Apache you're running, this block fixes the issue by stating that you are running some version of Apache</code><br><br><code>
 # HTTP TRACE Security Fix
 TraceEnable off
@@ -90,11 +90,13 @@ RewriteRule .* - [F]
 ServerSignature Off
 ServerTokens Prod</code></pre>
 
-			Here are the TLS settings for Nginx
-			<pre><code># Enable TLSv1.2, disable SSLv3.0, TLSv1.0 and TLSv1.1
-ssl_protocols TLSv1.2;</code><br><br><code># Enable modern TLS cipher suites
-ssl_ciphers ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA256;</code><br><br><code># The order of cipher suites matters
-ssl_prefer_server_ciphers on;</code><br></pre>
+			<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file "000-default-le-ssl.conf" <br>usually found by doing "cd /etc/apache2/sites-enabled/"</p>
+			<pre><code><IfModule mod_ssl.c>
+<VirtualHost *:443>
+* SSL settings that aren't shown * 
+Header always set Strict-Transport-Security "max-age=31536000"
+</VirtualHost>
+</IfModule></code></pre>
 				
 				
 			

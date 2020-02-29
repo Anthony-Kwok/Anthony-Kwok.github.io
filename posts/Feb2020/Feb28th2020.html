@@ -108,10 +108,17 @@ if ($request_method !~ ^(GET|HEAD|POST)$ )
 }
 
 server_tokens off;</code></pre>
-
-			<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file <br>"000-default-le-ssl.conf" usually found by going to<br>"cd /etc/apache2/sites-enabled/"</p>
+			<p>Adding an HSTS Header, which forces HTTPS when connecting to the webserver</p>
 			<pre><code>add_header Strict-Transport-Security "max-age=31536000; preload";</code></pre>
 			<p>Put that in between the server code block that handles traffic with HTTPS (should see port 443)</p>
+			<p><b>PHP Configurations</b></p>
+			<p>Disable the expose_php directive</p>
+			<p>By default, the <b>expose_php</b> directive is enabled. However, you may not want to broadcast the specific PHP version your site is using.<br>Similarly, some third-party applications require the <b>expose_php</b> directive to be disabled.</p>
+			<p>To disable the <b>expose_php</b> directive, use a text editor to modify your <i>php.ini</i> file as follows:</p>
+			<pre><code>expose_php = off</code></pre><br>
+			<p>With the <b>expose_php</b> directive disabled, PHP will not send the <b>X-Powered-By</b> header. To re-enable the <b>expose_php</b> directive and send the <b>X-Powered-By</b> header, modify your <i>php.ini</i> file as follows:</p>
+			<pre><code>expose_php = on</code></pre>
+			
 			Verify that your SSL settings are good enough by going to <strong><a href="https://www.ssllabs.com/ssltest/">SSL_Labs</a></strong>. Make sure to add an HSTS header to get that A+ rating.
 				
 			</p>

@@ -78,11 +78,11 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 TraceEnable off
 						 
 # HTTP TRACE/TRACK Security Fix - This is also required in each VirtualHost
-<IfModule mod_rewrite.c>
+&lt;IfModule mod_rewrite.c&gt;
 RewriteEngine on
 RewriteCond %{REQUEST_METHOD} ^(TRACE|TRACK)
 RewriteRule .* - [F]
-</IfModule>
+&lt;/IfModule&gt;
 
 # Disable Reporting Apache version via HTTP headers
 # These are set to On and OS respectively in httpd.conf by default
@@ -90,13 +90,13 @@ RewriteRule .* - [F]
 ServerSignature Off
 ServerTokens Prod</code></pre>
 
-			<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file "000-default-le-ssl.conf" <br>usually found by doing "cd /etc/apache2/sites-enabled/"</p>
-			<pre><code><IfModule mod_ssl.c>
-<VirtualHost *:443>
+			<p>Adding an HSTS Header, which forces HTTPS when connecting<br>In Apache, typically you will add the HSTS header by editing this file <br>"000-default-le-ssl.conf" usually found by doing "cd /etc/apache2/sites-enabled/"</p>
+			<pre><code>&lt;IfModule mod_ssl.c&gt;
+&lt;VirtualHost *:443&gt;
 * SSL settings that aren't shown * 
 Header always set Strict-Transport-Security "max-age=31536000"
-</VirtualHost>
-</IfModule></code></pre>
+&lt;/VirtualHost&gt;
+&lt;/IfModule&gt;</code></pre>
 				
 				
 			

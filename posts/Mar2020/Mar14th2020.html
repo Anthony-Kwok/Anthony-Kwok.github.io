@@ -125,17 +125,17 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 				</blockquote>
 			</p>
 			<p>
-				10. Thus in order to get the invite code, we need to make a POST request to https://www.hackthebox.eu/api/invite/generate. <br>
-				11. Fire up the terminal of your choice and make a POST request using curl by typing <br>
+				10. Thus in order to get the invite code, we need to make a POST request to https://www.hackthebox.eu/api/invite/generate. <br><br>
+				11. Fire up the terminal of your choice and make a POST request using curl by typing <br><br>
 				<blockquote><code>curl -XPOST https://www.hackthebox.eu/api/invite/generate</code></blockquote>
-				12. You will get a success message that looks something like this.<br>
+				12. You will get a success message that looks something like this.<br><br>
 				<blockquote>
 					<pre><code>{"success":1,"data":{"code":"somerandombase64characters=","format":"encoded"},"0":200}</code></pre>
 				</blockquote>
-				13. As you can see, we have another Base64 encoded string. So run that by <a href="https://www.base64decode.org/">https://www.base64decode.org/</a> again.<br>
-				14. Paste in the code that you got as the response of the POST request in Step 11. Tadah! You get your invite code.<br>
-				15. Now go back to <a href="https://www.hackthebox.eu/invite">https://www.hackthebox.eu/invite</a> and paste in the result in Step 14. <br>
-				16. Now you can proceed to normal sign up and get access to all the Virtual Machines and challenges Hack The Box has to offer. <br>
+				13. As you can see, we have another Base64 encoded string. So run that by <a href="https://www.base64decode.org/">https://www.base64decode.org/</a> again.<br><br>
+				14. Paste in the code that you got as the response of the POST request in Step 11. Tadah! You get your invite code.<br><br>
+				15. Now go back to <a href="https://www.hackthebox.eu/invite">https://www.hackthebox.eu/invite</a> and paste in the result in Step 14. <br><br>
+				16. Now you can proceed to normal sign up and get access to all the Virtual Machines and challenges Hack The Box has to offer. <br><br>
 			</p>
 			<p> 
 				I hope this has helped. Please share this with anyone who is interested in in hacking or cyber security. <br>

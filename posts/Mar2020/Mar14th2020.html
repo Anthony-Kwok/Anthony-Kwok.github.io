@@ -61,7 +61,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 
         <div class="col-sm-8 blog-main">
           <div class="blog-post">
-            <h2 class="blog-post-title responsiveFontSizeHeader">How to Get the Invited Code to HackTheBox</h2>
+            <h2 class="blog-post-title responsiveFontSizeHeader">Get Access to HackTheBox</h2>
             <p class="blog-post-meta noMarginBottom">March 14th, 2020 by <a href="#">Anthony Kwok</a></p>
 			<p class="blog-post-meta noPadding">Tags: <a href="#">Security</a></p>
 
@@ -70,7 +70,7 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
               <p>
 				  Note: I highly recommend you actually try to figure this out yourself before continuing to read this post.
 				  This "entrance exam" isn't terribly hard to figure out on your own even if you're a complete novice. 
-				  I presume if you're reading this then you're at the point where you've failed after a considerable amount of tries 
+				  I presume if you're reading this then you're at the point where you've failed a considerable amount of times
 				  and would like to figure out how to get the access code or you just like reading my blog. 
 				  Keep in mind my way is not the only way.</p>
 			  </p>
@@ -89,39 +89,39 @@ Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
 				</blockquote>
 			<p><b>So How Does One Get that Access Code?</b></p>
 				<blockquote>
-					<img src="/res/HackTheBox.svg" class="img-responsive" alt="HackTheBox Webpage"/>
+					<img src="/res/HackTheBox.svg" class="blog-image" alt="HackTheBox Webpage"/>
 				</blockquote>
 			<p>So this is the Website when you first visit the page. Here are the steps.</p>
 			<p> 
-				1. First, visit the <a href="https://forum.hackthebox.eu/discussion/76/newbie-guide">Hack the Box forums</a> to see how to get started for newbies.<br>
-				2. If you try to sign up at <a href="https://www.hackthebox.eu/invite">HackTheBox</a>, you will see that the page asks for an invite code. <br>
-				3. Open developer tools by right clicking and selecting inspect element on the page. You can also press Ctrl+Shift+I in either Chrome or Firefox. <br>
-				4. By inspecting the Elements of the webpage, we can see the page is loading a script called /js/inviteapi.min.js. <br>
+				1. First, visit the <a href="https://forum.hackthebox.eu/discussion/76/newbie-guide">Hack the Box forums</a> to see how to get started for newbies.<br><br>
+				2. If you try to sign up at <a href="https://www.hackthebox.eu/invite">HackTheBox</a>, you will see that the page asks for an invite code. <br><br>
+				3. Open developer tools by right clicking and selecting inspect element on the page. You can also press Ctrl+Shift+I in either Chrome or Firefox. <br><br>
+				4. By inspecting the Elements of the webpage, we can see the page is loading a script called /js/inviteapi.min.js. <br><br>
 				<blockquote>
-					<img src="/res/HackTheBoxInvite.svg" class="img-responsive" alt="HackTheBox Sign Up page"/>
+					<img src="/res/HackTheBoxInvite.svg" class="blog-image" alt="HackTheBox Sign Up page"/>
 				</blockquote>
 			</p>
 			<p>
 				5. So if you go to <a href="https://www.hackthebox.eu/js/inviteapi.min.js">https://www.hackthebox.eu/js/inviteapi.min.js</a>,
-				you will see a Javascript file like this. 
+				you will see a Javascript file like this. <br><br>
 				<blockquote>
-					<img src="/res/HackTheBoxInviteCode.svg" class="img-responsive" alt="HackTheBox Make Invite Code Javascript"/>
+					<img src="/res/HackTheBoxInviteCode.svg" class="blog-image" alt="HackTheBox Make Invite Code Javascript"/>
 				</blockquote>
 			</p>
 			<p>
-				6. I've highlighted makeInviteCode since it looks promising. Let's go back to the <a href="https://www.hackthebox.eu/invite">invite page</a> to see what it does.<br>
+				6. I've highlighted makeInviteCode since it looks promising. Let's go back to the <a href="https://www.hackthebox.eu/invite">invite page</a> to see what it does.<br><br>
 				7. On the invite page, go to the console tab in Developer tools (Ctrl+Shift+I) and type makeInviteCode() and press ENTER. You will get a response with 
-				a 200 Success status code and data as shown below
+				a 200 Success status code and data as shown below. <br><br>
 				<blockquote>
-					<img src="/res/HackTheBoxInviteCodeData.svg" class="img-responsive" alt="HackTheBox Make Invite Code Data"/>
+					<img src="/res/HackTheBoxInviteCodeData.svg" class="blog-image" alt="HackTheBox Make Invite Code Data"/>
 				</blockquote>
 			</p>
 			<p>
-				8. As seen in the image, the encoding is in Base64, so let's decode the this message by going to a Base64 Decryptor. 
+				8. As seen in the image, the encoding is in Base64, so let's decode the this message by going to a Base64 Decryptor. <br><br>
 				I used <a href="https://www.base64decode.org/">https://www.base64decode.org/</a>
 				9. Paste the copied text into the decoder as shown below. 
 				<blockquote>
-					<img src="/res/HackTheBoxInviteCodeBase64.svg" class="img-responsive" alt="HackTheBox Make Invite Code Base64"/>
+					<img src="/res/HackTheBoxInviteCodeBase64.svg" class="blog-image" alt="HackTheBox Make Invite Code Base64"/>
 				</blockquote>
 			</p>
 			<p>

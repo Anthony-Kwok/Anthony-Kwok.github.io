@@ -1,0 +1,364 @@
+<!--------
+@Author: Anthony Kwok
+@Owner: Anthony Kwok
+Version: 1.0
+Built using Bootstrap 3.4.1 and Bootstrap Blog Template
+Template can be found https://getbootstrap.com/docs/3.4/examples/blog/
+------->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Anthony Kwok's Blog</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/ie10-viewport-bug-workaround.css">
+<link href="/css/blog.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="Keywords" content="Blog">
+<meta name="Description" content="Anthony Kwok's Blog">
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="jumbotron text-center fullPadding responsiveMargin" style="margin-bottom:0">
+		<h1>Kwok with a Blog</h1>
+		<p class="noMarginBottom responsiveFontSize">The official blog belonging to Anthony Kwok</p> 
+	</div>
+	<!-- navbar -->
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>                        
+				</button>
+			<a class="navbar-brand" href="/index.html">Anthony Kwok</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/index.html#about">About Me</a></li>
+					<li><a href="/blog.html">Blog</a></li>
+					<li><a href="/index.html#portfolio">Portfolio</a></li>
+					<li><a href="/index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- End Navbar-->
+	
+	<div class="container">
+
+
+      <div class="row marginTop1em">
+
+        <div class="col-sm-8 blog-main">
+          <div class="blog-post">
+            <h2 class="blog-post-title responsiveFontSizeHeader">The Ultimate Hacker's Toolkit</h2>
+            <p class="blog-post-meta noMarginBottom">March 15th, 2020 by <a href="#">Anthony Kwok</a></p>
+			<p class="blog-post-meta noPadding">Tags: <a href="#">Security</a></p>
+
+            <p>To all future pentesters out there, this is the current suite of tools I use and have familiarity with.</p>
+            <blockquote>
+              <p>
+				  Note: This list is not all inclusive (no Hak5 tools in this list). I recommend knowing how these tools work and being able to work the ins and outs 
+				  of each tool. Proficiency comes from practice and use. The more familiar you become with these tools, the easier it'll be
+				  for you down the line in your hacking or pentesting career. I currently do not have any Hak5 tools although I do plan
+				  on acquiring a full Hak5 set in the future. I highly recommend you are familiar with command line. 
+				  I will be writing a future post on a tutorial for Linux command line and resources that helped me develop 
+				  command line proficiency. I also recommend having sufficient knowledge in networking, primarily understanding the OSI Model and 
+				  understanding TCP/IP, UDP, and subnets. All tools in this list are what I actually use when I conduct a pentest, although some tools I use more frequently than others.</p>
+			  </p>
+            </blockquote>
+			<p><b>Let's Get Down to It. In No Particular Order</b></p><br><br>
+			<p>1. <a href="https://www.kali.org/downloads/">Kali Linux</a></p>
+				<blockquote>
+					I currently use Kali Linux build 2019.3. I do not like the new GUI in build 2019.4 and later.
+					Kali Linux is nice because it includes a plethora of tools and it all comes in the distro, 
+					meaning you do not have to download more tools. The biggest downside is that it's a bit 
+					overwhelming for first time users. It is not an intuitive distro and despite it having a 
+					GUI, you will be spending most of your time in the terminal. All tools in this list are 
+					built into Kali Linux unless otherwise stated. I have integrated all of these tools in 
+					my Kali Linux VM and I suggest you do the same. Download links are in the headers.
+				</blockquote>
+			<p>2. <a href="https://portswigger.net/burp/communitydownload">Burp Suite</a></p>
+				<blockquote>
+					Burp Suite is an integrated platform for performing security testing of web applications. 
+					Its various tools work seamlessly together to support the entire testing process, 
+					from initial mapping and analysis of an application's attack surface, 
+					through to finding and exploiting security vulnerabilities. I use this when I'm serious about
+					testing web apps. The community version (free version) is native to Kali but the professional 
+					license, which is priced at $399 per year is a bit costly for the entry pentester. Although
+					if you're primarily going to be a web pentester, I strongly recommend paying for the full version.
+				</blockquote>
+			<p>3. <a href="https://www.tenable.com/products/nessus/nessus-essentials">Nessus/OpenVAS</a></p>
+				<blockquote>
+					Nessus is the commercial version of <a href="https://en.wikipedia.org/wiki/OpenVAS">OpenVAS</a> (Open Vulnerability Assessment Scanner). 
+					You can get a free license which allows scanning of 16 IP addresses by registering for Nessus Essentials
+					or set up an OpenVAS environment on your Kali distro which allows scanning of unlimited IP addresses. 
+					This framework is capable of scanning machines and reporting vulnerabilities about that machine.
+					It's a must have to make your life a lot easier and conduct efficient pentests.
+					This tool is not native to Kali and you have to register a license and then download it via dkpg.
+				</blockquote>
+			<p>4. <a href="https://www.metasploit.com/">Metasploit</a></p>
+				<blockquote>
+					Metasploit is a framework that provides information about security vulnerabilities and aids 
+					in pentesting by giving you scripts that allow you to scan or exploit these security vulnerabilities.
+					I use Metasploit constantly. It's very robust and versatile. Knowing the ins and outs of this framework
+					is a must for any offensive security professional. I mainly use this for exploits, enumeration, and scanning. 
+				</blockquote>
+			<p>5. <a href="https://nmap.org/">Nmap</a></p>
+				<blockquote>
+					Nmap, aka network mapper, is a tool that allows you to conduct network scans against IP addresses 
+					or subnets (range of IP addresses). This tool will allow you to target specific machines and gather
+					external information such as the ports that are open, what services are running on that port, and 
+					what machine is hosting that service. It is a very useful tool to detect what hosts are there since 
+					it is possible to block ICMP requests so pinging the machine would result in unuseful data. 
+				</blockquote>
+			<p>6. <a href="https://www.aircrack-ng.org/">Aircrack Suite</a></p>
+				<blockquote>
+					Aircrack is the one stop shop to break WiFi. It
+					is a complete suite of tools to assess WiFi network security.
+					It focuses on different areas of WiFi security:
+						1. Monitoring: Packet capture and export of data to text files for further processing by third party tools
+						2. Attacking: Replay attacks, deauthentication, fake access points and others via packet injection
+						3. Testing: Checking WiFi cards and driver capabilities (capture and injection)
+						4. Cracking: WEP and WPA PSK (WPA 1 and 2)
+					All tools are command line which allows for heavy scripting. 
+				</blockquote>
+			<p>7. <a href="https://tools.kali.org/reporting-tools/cherrytree">Cherry Tree</a></p>
+				<blockquote>
+					A hierarchical note taking application, 
+					featuring rich text and syntax highlighting, storing data in a single xml or sqlite file.
+					This is what I use to take notes. It allows me to log data down and proper notekeeping is
+					important when you're reporting bugs or vulnerabilities to the system maintainer(s).
+				</blockquote>
+			<p>8. <a href="https://www.wireshark.org/">Wireshark</a></p>
+				<blockquote>
+					Wireshark is a free and open-source packet analyzer. 
+					It is used for network troubleshooting, analysis, software and communications protocol development, and education
+					It is used to capture network traffic along your network device. I use it to capture traffic going to and from a 
+					device or machine primarily for the intent of password sniffing. It is a must have in a pentester's arsenal.
+				</blockquote>
+			<p>9. <a href="https://tools.kali.org/information-gathering/nikto">Nikto</a></p>
+				<blockquote>
+					Nikto is an Open Source web server scanner which performs comprehensive tests against web servers for multiple items, 
+					including over 6700 potentially dangerous files/programs, checks for outdated versions of servers, 
+					and version specific problems on web servers. 
+					It also checks for server configuration items such as the presence of multiple index files, HTTP server options, and will attempt to identify installed web servers and software. 
+					Scan items and plugins are frequently updated and can be automatically updated. However, Nikto is not designed as a stealthy tool. 
+					It will test a web server in the quickest time possible, and is obvious in log files or to an IPS/IDS. 
+					However, there is support for LibWhisker’s anti-IDS methods in case you want to give it a try (or test your IDS system).
+					Not every check is a security problem, though most are. 
+					There are some items that are “info only” type checks that look for things that may not have a security flaw, but the webmaster or security engineer may not know are present on the server.
+					These items are usually marked appropriately in the information printed. There are also some checks for unknown items which have been seen scanned for in log files.
+					Overall, this tool is really great for actively scanning and attacking webservers.
+				</blockquote>
+			<p>10. <a href="https://github.com/byt3bl33d3r/CrackMapExec/wiki/Installation">CrackMapExec</a></p>
+				<blockquote>
+					CrackMapExec (a.k.a CME) is a post-exploitation tool that helps automate assessing the security of large Active Directory networks. 
+					Built with stealth in mind, CME follows the concept of "Living off the Land": abusing built-in Active Directory features/protocols to achieve it's functionality and allowing it to evade most endpoint protection/IDS/IPS solutions.
+					Although meant to be used primarily for offensive purposes (e.g. red teams), CME can be used by blue teams as well to assess account privileges, find possible misconfigurations and simulate attack scenarios.
+					Primarily used to conduct pass the hash attacks in Windows AD environments. 
+					This tool is not built into Kali by default (at least in the build I am using). 
+				</blockquote>
+			<p>11. <a href="https://github.com/BloodHoundAD/BloodHound">Bloodhound</a></p>
+				<blockquote>
+					Bloodhound is an open source application used for analyzing security of active directory domains. 
+					The tool is inspired by graph theory and active directory object permissions. 
+					The tool performs data ingestion from Active Directory domains and highlights the potential for escalation of rights in Active Directory domains, thus uncovering hidden or complex attack paths that can compromise security of a network.
+					I will have a future blog post on how to set up and use Bloodhound to find domain admins in Active Directory. 
+					Not native to Kali, you can download it 
+				</blockquote>
+			<p>12. <a href="https://www.cobaltstrike.com/">Cobalt Strike</a></p>
+				<blockquote>
+					Cobalt Strike is threat emulation software. 
+					Execute targeted attacks against modern enterprises with one of the most powerful network attack kits available to penetration testers. 
+					This is not compliance testing. Cobalt Strike's system profiler discovers which client-side applications your target uses, with version information.
+					I personally do not use this tool often since it costs a lot and you can actually do solid pentesting without it however, many pentesting companies do use cobalt strike in their arsenal, 
+					which is why this tool made it on my list. Not native to Kali
+				</blockquote>	
+			<p>13. <a href="https://www.offensive-security.com/metasploit-unleashed/about-meterpreter/">Meterpreter</a></p>
+				<blockquote>
+					This is the payload inside of Metasploit. Metasploit as a framework comes with a lot of tools but the tool used for exploiting vulnerabilities
+					is called meterpreter. Meterpreter allows an attacker to control a victim’s computer by running an invisible shell and establishing a communication channel back to the attacking machine. 
+					Its power and versatility have made it a favorite among pentesters, and clearly these qualities have made it equally attractive to bad actors.
+					Meterpreter has all the “basic” features one would expect from a penetration testing tool. 
+					These include access to a command shell, running executables, sending and receiving files and profiling the network. 
+					However it can do much more than that. Taking screenshots, keylogging, port forwarding and privilege escalation are only a few of its capabilities. 
+					Moreover, it can load various in-memory modules such as Mimikatz for dumping hashes and plaintext passwords. 
+					Meterpreter itself resides entirely in memory, writes nothing to disk, and creates no new processes. 
+					Instead, it injects itself into compromised processes and can also migrate from one to another as necessary. 
+					These features make it an attractive payload for APTs that prioritize staying under the radar.
+					This is another must have tool in a hacker/pentester's arsenal.
+				</blockquote>
+			<p>14. <a href="https://tools.kali.org/sniffingspoofing/responder">Responder</a></p>
+				<blockquote>
+					This tool is first an LLMNR and NBT-NS responder, it will answer to *specific* NBT-NS (NetBIOS Name Service) queries based on their name suffix (see: http://support.microsoft.com/kb/163409). By default, the tool will only answers to File Server Service request, which is for SMB. The concept behind this, is to target our answers, and be stealthier on the network. 
+					This also helps to ensure that we don’t break legitimate NBT-NS behavior. 
+					You can set the -r option to 1 via command line if you want this tool to answer to the Workstation Service request name suffix.
+					Responder is a powerful tool for quickly gaining credentials and possibly even remote system access. It is a LLMNR, NBT-NS & MDNS poisoner that is easy to use and very effective against vulnerable networks.
+					Responder works by imitating several services and offering them to the network. Once a Windows system is tricked into communicating to responder via one of these services or when an incorrect UNC share name is searched for on the LAN, responder will respond to the request, grab the username & password hash and log them. Responder has the ability to prompt users for credentials when certain network services are requested, resulting in clear text passwords. 
+					It can also perform pass-the-hash style attacks and provide remote shells. It is design to target Active Directory. 
+					I will also have a future blog post on how to use Responder on its own and then combining it with Bloodhound to show you how to pwn/own AD.
+				</blockquote>
+			<p>15. <a href="https://github.com/gentilkiwi/mimikatz">Mimikatz</a></p>
+				<blockquote>
+					Another great tool to attack Active Directory. Especialliy Kerberoasting. 
+					Mimikatz is a leading post-exploitation tool that dumps passwords from memory, as well as hashes, PINs and Kerberos tickets. 
+					Other useful attacks it enables are pass-the-hash, pass-the-ticket or building Golden Kerberos tickets. 
+					This makes post-exploitation lateral movement within a network easy for attackers. 
+					An essential tool for privilege escalation in Windows environments
+				</blockquote>
+			<p>16. <a href="https://hunter.io/try/search">Hunter</a></p>
+				<blockquote>
+					Hunter is the leading solution to find and verify professional email addresses. Primarily used for 
+					email addresses and username enumeration. Very handy tool to see the nomenclature of usernames of a 
+					company or organization and a tool I often use when conducting OSINT.
+				</blockquote>
+			<p>17. <a href="https://github.com/fox-it/mitm6">MitM6</a></p>
+				<blockquote>
+					Man in the Middle IPv6. One of my personal favorites since IPv6 isn't as mainstream as IPv4. However,
+					oddly enough most organizations only have firewall rules protecting them from IPv4 addresses. (BHR ACLs have to have both IPv4 and IPv6 address in order to block the machine entirely).
+					Sure in Linux, it is a one line command to disable IPv6 but most people do not type that command. Mitm6 is a pentesting tool that exploits the default configuration of Windows to take over the default DNS server. 
+					It does this by replying to DHCPv6 messages, providing victims with a link-local IPv6 address and setting the attackers host as default DNS server. 
+					As DNS server, mitm6 will selectively reply to DNS queries of the attackers choosing and redirect the victims traffic to the attacker machine instead of the legitimate server. 
+					For a full explanation of the attack, see the <a href="https://blog.fox-it.com/2018/01/11/mitm6-compromising-ipv4-networks-via-ipv6/">blog post</a> about mitm6. 
+					Mitm6 is designed to work together with ntlmrelayx from impacket for WPAD (Windows Proxy Auto Discovery) spoofing and credential relaying.
+					Not native to Kali, please install by going to the link.
+				</blockquote>
+			<p>18. <a href="https://github.com/sqlmapproject/sqlmap">SQLMap</a></p>
+				<blockquote>
+					SQLmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws and taking over of database servers. 
+					It comes with a powerful detection engine, many niche features for the ultimate penetration tester and a broad range of switches lasting from database fingerprinting, over data fetching from the database, to accessing the underlying file system and executing commands on the operating system via out-of-band connections.
+					Nothing more to it. This tool solely can give a pentester the power to become a backend developer's worse nightmare.
+				</blockquote>
+			
+			<p>19. <a href="https://github.com/magnumripper/JohnTheRipper">John the Ripper</a></p>
+				<blockquote>
+					John the Ripper is a fast password cracker, currently available for many flavors of Unix, macOS, Windows, DOS, BeOS, and OpenVMS (the latter requires a contributed patch). Its primary purpose is to detect weak Unix passwords. Besides several crypt(3) password hash types most commonly found on various Unix flavors, supported out of the box are Kerberos/AFS and Windows LM hashes, as well as DES-based tripcodes, plus hundreds of additional hashes and ciphers in "-jumbo" versions.
+					This is designed to decimate weak passwords, whereas Hashcat is designed to annihilate complex passwords. I recommend using John for passwords that are between 1-8 characters and use Hashcat for passwords longer than 8 characters.	
+				</blockquote>
+			<p>20. <a href="https://github.com/lockfale/OSINT-Framework">OSINT Framework</a></p>
+				<blockquote>
+					OSINT framework focused on gathering information from free tools or resources. The intention is to help people find free OSINT resources. Some of the sites included might require registration or offer more data for $$$, but you should be able to get at least a portion of the available information for no cost.
+					This framekwork was originally created with an information security point of view. Since then, the response from other fields and disciplines has been incredible. 
+					This is a collection of tools to conduct information gathering and reconnaissance
+					</blockquote>
+			<p>21. <a href="https://www.social-engineer.org/framework/se-tools/computer-based/social-engineer-toolkit-set/">SET</a></p>
+				<blockquote>
+					The Social-Engineer Toolkit (SET) is specifically designed to perform advanced attacks against the human element. This tool is standard issue in a pentester's arsenal.
+					SET was written by David Kennedy (ReL1K) and with a lot of help from the community it has incorporated attacks never before seen in an exploitation toolset. 
+					The attacks built into the toolkit are designed to be targeted and focused attacks against a person or organization used during a penetration test.
+				</blockquote>
+			<p>22. <a href="https://github.com/darryllane/Bluto">Bluto</a></p>
+				<blockquote>
+					Bluto now does email address enumeration based on the target domain, currently using Bing and Google search engines plus gathering data from the Email Hunter service and LinkedIn. 
+					<a href="https://haveibeenpwned.com/">https://haveibeenpwned.com/</a> is then used to identify if any email addresses have been compromised.
+					Search engine queries are configured in such a way to use a random User Agent: on each request and does a country look up to select the fastest Google server in relation to your egress address. Each request closes the connection in an attempt to further avoid captchas, however exsesive lookups will result in captchas (Bluto will warn you if any are identified).
+				</blockquote>
+			<p>23. <a href="https://www.shodan.io/">Shodan</a></p>
+				<blockquote>
+					Shodan is a search engine that lets the user find specific types of computers connected to the internet using a variety of filters. Some have also described it as a search engine of service banners, which are metadata that the server sends back to the client.
+					Shodan allows you to search for exposed or vulnerable machines. I frequently check my own machines against shodan to make sure none of my home servers are on it. 
+				</blockquote>
+			<p>24. <a href="https://tools.kali.org/web-applications/dirbuster">Dirbuster</a></p>
+				<blockquote>
+					DirBuster is a multi threaded java application designed to brute force directories and files names on web/application servers. Often is the case now of what looks like a web server in a state of default installation is actually not, and has pages and applications hidden within. DirBuster attempts to find these. However tools of this nature are often as only good as the directory and file list they come with. A different approach was taken to generating this. 
+					The list was generated from scratch, by crawling the Internet and collecting the directory and files that are actually used by developers! DirBuster comes a total of 9 different lists, this makes DirBuster extremely effective at finding those hidden files and directories. And if that was not enough DirBuster also has the option to perform a pure brute force, which leaves the hidden directories and files nowhere to hide.
+				</blockquote>
+			<p>25. <a href="https://github.com/hashcat/hashcat">Hashcat</a></p>
+				<blockquote>
+					Hashcat is the world's fastest and most advanced password recovery utility, supporting five unique modes of attack for over 300 highly-optimized hashing algorithms. 
+					Hashcat currently supports CPUs, GPUs, and other hardware accelerators on Linux, Windows, and macOS, and has facilities to help enable distributed password cracking.
+					It's a password cracker's dream. Password representations are primarily associated with hash keys, such as MD5, SHA, WHIRLPOOL, RipeMD, etc. 
+					They are also defined as a one-way function, which is a mathematical operation that is easy to perform, but very difficult to reverse engineer.
+					Hashcat turns readable data into a garbled state (this is a random string of fixed length size). 
+					Hashes do not allow someone to decrypt data with a specific key, as standard encryption protocols allow.
+					Hashcat uses precomputed dictionaries, rainbow tables, and even a brute-force approach to find an effective and efficient way crack passwords.
+				</blockquote>
+			<p>26. <a href="https://tools.kali.org/information-gathering/theharvester">TheHarvester</a></p>
+				<blockquote>
+					theHarvester is a very simple to use, yet powerful and effective tool designed to be used in the early statges of a penetration test or red team engagement. Use it for open source intelligence (OSINT) gathering to help determine a
+					company's external threat landscape on the internet. The objective of this program is to gather emails, subdomains, hosts, employee names, open ports and banners from different public sources like search engines, PGP key servers and SHODAN computer database.
+					This tool is intended to help Penetration testers in the early stages of the penetration test in order to understand the customer footprint on the Internet. It is also useful for anyone that wants to know what an attacker can see about their organization.
+				</blockquote>
+			<p>26. <a href="https://www.python.org/downloads/">Python</a></p>
+				<blockquote>
+					I highly recommend proficiency in Python since a lot of scripting can be written in Python. If you want more versatility than bash but still run
+					effective and powerful scripts, Python is the way to go. 
+				</blockquote>
+			<p>
+				I want to give a huge shoutout to <a href="https://www.thecybermentor.com">TheCyberMentor (Heath Adams)</a> for being the Richard Stallman of Cyber Security.
+				I started my offensive security path with his <a href="https://www.thecybermentor.com/zero-to-hero-pentesting">Zero to Hero</a> course.
+				Happy Hacking. If there are any tools that aren't on this list that should be (excluding Hak5), please DM me on my socials and I'll correct it if I see fit.
+			</p>
+				
+          </div><!-- /.blog-post -->
+          
+		
+          <nav>
+            <ul class="pager">
+              <!--<li><a href="#">Previous</a></li>-->
+              <li><a href="/posts/Mar2020/Mar14th2020.html">Previous</a></li>
+			  <li><a href="/posts/Mar2020/Mar16th2020.html">Next</a></li>
+            </ul>
+          </nav>
+
+        </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+            <h4>About</h4>
+			<p>
+			This blog is where I'll be posting information related to my Life, Cybersecurity, IT, Food recipes, etc. I aim to please but I know I won't satisfy everyone on the internet. 
+			So if you like Technology, Cybersecurity, and someone who has a very unique personality, then this hopefully is the place for you. Stick around, enjoy the ride, you may never know what you'll find.
+			</p>
+          </div>
+          <div class="sidebar-module noMarginBottom">
+            <h4><button class="btn btn-info"><a href="/blog.html">Archives</a></button></h4>
+          </div>
+          <div class="sidebar-module">
+            <h4>Socials</h4>
+            <ol class="list-unstyled">
+              <li><a href="https://github.com/Anthony-Kwok/">GitHub</a></li>
+              <li><a href="https://twitter.com/OfficialRedIce">Twitter</a></li>
+              <li><a href="https://www.facebook.com/kwack.kwack.kwack">Facebook</a></li>
+			  <li><a href="https://www.instagram.com/frost_byte__/">Instagram</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->
+
+	<!------------Footer---------------->
+	<div class="container-fluid">
+		<div class="row">
+			<footer class="text-center footer-bg maxWidth">
+				<a class="up-arrow" href="#" data-toggle="tooltip" title="TO TOP">
+					<span class="glyphicon glyphicon-chevron-up paddingTop"></span>
+				</a><br>
+				<a href="https://www.facebook.com/kwack.kwack.kwack" class="fa fa-facebook"></a>
+				<a href="https://twitter.com/OfficialRedIce" class="fa fa-twitter"></a>
+				<a href="https://www.instagram.com/frost_byte__/" class="fa fa-instagram"></a>
+				<a href="https://github.com/Anthony-Kwok/" class="fa fa-github"></a>
+				<p class="paddingBottom noPaddingTop noMargin">© 2020 Anthony Kwok All Rights Reserved </p> 
+			</footer>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="/js/ie10-viewport-bug-workaround.js"></script>
+</body>
+
+</html>

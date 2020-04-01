@@ -1,0 +1,4 @@
+Sitemap: https://anthony-kwok.com/sitemap.xml
+
+User-agent: *
+Disallow

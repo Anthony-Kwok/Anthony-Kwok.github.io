@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://anthony-kwok.com/</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/index.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/blog.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/posts/Mar2020/Mar15th2020.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/posts/Mar2020/Mar14th2020.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/posts/Feb2020/Feb28th2020.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/posts/Feb2020/Feb21st2020.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://anthony-kwok.com/posts/Feb2020/Feb20th2020.html</loc>
+  <lastmod>2020-04-01T01:09:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
